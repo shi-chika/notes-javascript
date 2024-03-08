@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bs CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Mia's page</title>
+  </head>
+<body>
+    <div class="page1 bg-gray">
+        <div class="px-5 container bg-white content">
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+               
+                
+                
+            </ul>
+            
+            <p class="text-center py-3 mb-5">網頁全端開發JavaScript_0927</p>
+            
+            <div class="fw-300">
+              <h4>迴圈 Loop </h4>  
+              <hr>
+              <ul>
+                <li>當條件運算式成立時，就會重複執行某一段程式</li>
+                <li>檢測條件，直到檢測到 false 才會停止執行</li>
+                <li>遇到<span class="font-color1">return</span>會中止迴圈</li>
+                
+              </ul>
+              <br>
+              <p class="h5">for迴圈</p>
+              <hr>
+              <ul>
+                <li>當變數符合條件就會執行，直到不符合為止</li>
+                <li>*適合用在需跑完全部陣列以及已 <span class="mark-brown">知道執行次數的情況</span></li>
+                
+              </ul>
+              <p>定義</p>
+              
+              <pre class="bg-light fw-300 p-3">
+                <span class="font-color1">for</span> ( 變數 = 初始值 ; 變數 < 條件值 ; 變數 + 步進值 ) { <br>
+                    要執行的程式碼
+                }
+              </pre>
+              
+              <pre class="bg-light fw-300 p-3">
+                <span class="font-color1">for</span>(let i = 0; i < 5; i++) { <br>
+                    console.log( i );
+                }
+                結果為
+                <span class="font-color1">0,1,2,3,4</span>
+               
+              </pre>
+              <br>
+              <p class="h5">while迴圈</p>
+              <hr>
+              <ul>
+                <li>當while後的條件成立，就會執行後方程式，反之若while後為false則不會執行</li>
+                <li>適合用在以條件當作終止條件的時候，譬如：比較大小、布林值</li>
+                <li>一定要設定終止條件，才不會造成無限迴圈</li>
+              </ul>
+              <p>定義</p>
+              
+              <pre class="bg-light fw-300 p-3">
+                <span class="font-color1">while</span>  (condition) { <br>
+                    要執行的程式碼
+                }
+              </pre>
+              <pre class="bg-light fw-300 p-3">
+                let i = 0; 
+                <span class="font-color1">while</span>( i < 5) { <br>
+                    console.log( i );
+                    i++ ;
+                }
+                結果為
+                <span class="font-color1">0,1,2,3,4</span>
+              </pre>
+              <br>
+              <p class="h5">do while迴圈</p>
+              <hr>
+              <ul>
+                <li>while 是先檢查終止條件，再執行迴圈，do while 則是先執行迴圈，再檢查終止條件</li>
+                <li>因此 do while不管條件是否為 true，都會至少跑一次</li>
+                <li>再判斷條件是否要繼續執行，不執行則跳出迴圈</li>
+              </ul>
+              <p>定義</p>
+              <pre class="bg-light fw-300 p-3">
+               <span class="font-color1">do</span> {
+                    陳述式;
+                }
+               <span class="font-color1">while</span>  (條件式);    
+              </pre>
+              <pre class="bg-light fw-300 p-3">
+                let i = 5 ;
+                <span class="font-color1">do</span> {
+                     console.log(i);
+                     i++;
+                 }
+                <span class="font-color1">while</span>(i < 5);    
+                
+                結果為
+                <span class="font-color1">5</span>
+               </pre>
+               <br>
+               <p class="h5">巢狀迴圈 Nested Loop</p>
+               <hr>
+               <ul>
+                <li>巢狀迴圈是指，在loop內部還有另一個loop的情況</li>
+                <li>內部迴圈以及外部迴圈可以是任何類型，例如 while loop或 for loop</li>
+                <li>內部迴圈將在外部迴圈的每次迭代中，從頭到尾執行一次</li>
+               </ul>
+               <pre class="bg-light fw-300 p-3">
+               <span class="font-color1">for </span> (let i = 0; i < 2; i++) {
+                 <span class="font-color1">for </span> (let k = 10; k < 13; k++) {
+                      console.log(i, k);
+                    }
+                  }
+
+                  結果<span class="font-color1">
+                  0, 10
+                  0, 11
+                  0, 12
+                  1, 10
+                  1, 11
+                  1, 12   </span>    
+               </pre>
+               <pre class="bg-light fw-300 p-3">
+                <span class="font-color1">let </span> counter = 0;
+                  <span class="font-color1">for</span>  (let i = 0 ; i < 100 ; i++){
+                    <span class="font-color1">for</span>  (let k = 0 ; k < 500 ; k++){
+                      counter++;
+                    }
+                  }
+                console.log(counter);
+
+                   結果<span class="font-color1 ms-3">50000</span> <span class="text-secondary">//100*500</span>   
+                </pre>
+                <pre class="bg-light fw-300 p-3">
+                    
+                    <span class="font-color1">for </span> (let i = 0 ; i < 100 ;i++){
+                        <span class="font-color1">let </span> counter = 0;
+                        <span class="font-color1">for </span> (let k = 0; k < 500 ; k++){
+                          counter++;
+                        }
+                        console.log(counter);
+                      }
+                    結果  會印出100次<span class="font-color1 ms-3">500</span>
+                </pre>
+                <br>
+                <p class="h5">Break、continue關鍵字</p>
+                <hr>
+                <p class="h6">Break</p>
+                <ul>
+                    <li>用於終止迴圈，會中斷並跳出該迴圈</li>
+                    <li>break後的程式不會執行</li>
+                    <li>若放在於巢狀迴圈中，只會終止 break 在的那層迴圈，其他迴圈若不受影響還是會執行 </li>
+                    <li>若要終止整個巢狀迴圈，則需要使用return</li>
+                </ul>
+                <p class="h6">continue</p>
+                <ul>
+                    <li>跳過當次迴圈，強制進行下一次的迴圈</li>
+                    <li>continue後的程式不會執行</li>
+                    
+                </ul>
+                
+
+              
+              
+            <!-- 頁尾 -->
+            <br>
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/app0921.js"></script>
+</body>
+</html>

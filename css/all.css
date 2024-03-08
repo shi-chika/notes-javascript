@@ -1,0 +1,261 @@
+.bg-blue {
+  background-color: #f0f0f0;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: #f6f1ec;
+}
+
+.bg-light-blue {
+  background-color: #f0f0f3;
+}
+
+.bg-light-gray {
+  background-color: #fafafa;
+}
+
+.font-color1 {
+  color: #d63384;
+}
+
+.font-color2 {
+  color: brown;
+}
+
+.font-color3 {
+  color: #171717;
+}
+
+.font-color-green {
+  color: #7b8d41;
+}
+
+.font-color-yellow {
+  color: #c39043;
+}
+
+.mark-yellow {
+  background: linear-gradient(transparent 70%, #ffe187 0);
+}
+
+.mark-red {
+  background: linear-gradient(transparent 70%, #ed9676 0);
+}
+
+.mark-green {
+  background: linear-gradient(transparent 70%, #b7cd56 0);
+}
+
+.mark-brown {
+  background: linear-gradient(transparent 70%, #fca416 0);
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.font02 {
+  font-family: "Nunito Sans", "Noto Sans TC", sans-serif;
+}
+
+.titleBtn {
+  background-color: #F99D80;
+  color: #ffffff;
+  border: 1px solid #898181;
+}
+
+body {
+  font-family: "Noto Sans", "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+/* font-family: 'Skranji', cursive; */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 984px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+code {
+  font-size: 16px;
+  font-family: "Nunito Sans", "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.page-vh100 {
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-link {
+  /* color:#84909b ; */
+  /* color: #c49a69; */
+  color: #d2b74e;
+  font-weight: 500;
+}
+
+.line-cd {
+  border-bottom: 1px solid #d2b74e;
+}
+
+.main-title {
+  font-family: "Skranji", "Noto Sans TC", cursive, sans-serif;
+  line-height: 1.5;
+}
+
+.date-item li {
+  width: 15%;
+  margin: 12px;
+}
+.date-item a {
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  color: #5b4730;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  /* background-color: #c8baa7; */
+  border-radius: 8px;
+  font-weight: 700;
+  border: 3px dotted transparent;
+}
+
+.date-item :nth-child(odd) a {
+  background-color: #dcd3b2;
+}
+
+.date-item :nth-child(even) a {
+  background-color: #f5deb3;
+}
+
+.date-item a:hover {
+  border: 3px dotted #deb887;
+  background-color: transparent;
+}
+
+.content {
+  height: 100%;
+}
+
+.hp-img img:hover {
+  animation: shake 0.1s linear infinite alternate;
+}
+
+.rotate5:hover {
+  transform: rotate(10deg);
+}
+
+.rotate-5:hover {
+  transform: rotate(-10deg);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+.lesson-title {
+  padding: 12px 36px;
+  padding-left: 48px;
+  align-items: center;
+  background-color: #f8f9fa;
+  background-color: #e2ded6;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  position: relative;
+}
+.lesson-title::after {
+  position: absolute;
+  font: var(--fa-font-solid);
+  content: "\f107";
+  right: 10%;
+  color: #f0815c;
+  transition: all 0.5s;
+  font-size: 20px;
+  transform: rotate(0);
+}
+.lesson-title span {
+  margin-right: 24px;
+}
+.lesson-title p {
+  margin: 0;
+}
+
+.lesson-body {
+  transition: all 0.5s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+.lesson-body :last-child {
+  border-radius: 0 0 5px 5px;
+}
+.lesson-body li {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  padding-left: 48px;
+  background-color: #f8f9fa;
+}
+.lesson-body li:hover {
+  background-color: #ebebfc;
+}
+
+.icon-up::after {
+  transform: rotate(540deg);
+}
+
+.date-item2 li {
+  width: 40%;
+}
+.date-item2 a {
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #5b4730;
+  border: 3px solid transparent;
+  background-color: #f7e9c5;
+  border-radius: 4px;
+  font-weight: 700;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  vertical-align: middle;
+}
+.date-item2 a:hover {
+  border: 3px dashed #eacc6f;
+  background-color: transparent;
+}/*# sourceMappingURL=all.css.map */

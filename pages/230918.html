@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bs CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Mia's page</title>
+  </head>
+  <body>
+    <div class="page1 bg-gray">
+      <div class="px-5 container bg-white content">
+        <ul class="py-4 nav justify-content-end ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+            </li>
+            
+            
+        </ul>
+        
+          <p class="text-center py-3 mb-5">網頁全端開發JavaScript_0918</p>
+          <h4>變數與賦值</h4>
+          <hr>
+          <p>JavaScript中的<span class="mark-yellow">等號是賦值</span>，把等號右邊的數據放到等號左邊。</p>
+          <code>
+            x=5, x=x+1
+          </code>
+          <p>執行後 x會等於6</p>
+          <code >
+            x=x+1  也可寫成  x+=1
+          </code>
+          <h5 class="pt-5">Lexical Structure</h5>
+          <p class="small text-secondary">JavaScript 基本規則、語法</p>
+          <ol class="pb-5">
+            <li>JavaScript有大小寫分別</li>
+            <li>空白鍵、換行鍵都會被自動忽略</li>
+            <li>單行註解是<code class="ps-3">//</code></li>
+            <li>段落註解是<code class="ps-3">/* */</code></li>
+            <li>用來分開語句<code class="ps-3">;</code></li>
+          </ol>
+          <h5 class="mt-4">規則</h5>
+          <ol class="pb-5">
+            <li>let、const都是用來宣告變數</li>
+            <li>若變數的值會變動，用let宣告</li>
+            <li>若變數的值不會變動，或不希望被更改，用const宣告</li>
+            <li>請勿用var宣告變數</li>
+            <li>變數名稱的開頭可以用文字、底線_、金錢符號$，但 <span class="font-color2">不可用數字作為開頭</span></li>
+            <li>有特殊涵義的字(關鍵字)不可當變數名稱，例如:null、of、if、then、in、finally、for、while、break、continue、switch、try、let、const、var等等</li>
+          </ol>
+          <h5 >注意</h5>
+          <ul >
+            <li>若用const宣告變數，一定要馬上賦予初始值。(否則會出現語法錯誤提示)</li>
+            <li>用let宣告變數則不需要，沒有賦值的情況下變數的值為undefined(未被定義的值)。</li>
+            <li>用const、let宣告過的變數不能重複宣告。</li>
+            <li>const不能重複賦值，let可以。(以下範例是允許的)</li>
+          </ul>
+          <pre class="font-color1">
+          <code class="fs-6 ">
+            let x=5; 
+            x=10;
+            console.log(x);
+          </code>
+          </pre>
+          <div class="row">
+            <div class="col-8">
+              <table class="table table-bordered table-light table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">重複宣告變數</th>
+                    <th scope="col">重新賦值</th>
+                    <th scope="col">賦予初始值</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">let</th>
+                    <td class="text-danger">不行</td>
+                    <td>可以</td>
+                    <td>非必要</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">const</th>
+                    <td class="text-danger">不行</td>
+                    <td class="text-danger">不行</td>
+                    <td class="text-danger">必須</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          
+          
+          <h6 class="mt-5">後面章節會說明的概念</h6>
+          <ul class="pt-3 pb-5">
+            <li>請勿用var宣告變數</li>
+            <li>JavaScript引擎中有一個garbage collector的後台程式，會監視所有物件並刪除無法訪問的object。</li>
+          </ul>
+         
+          
+          <div class="row">
+            <div class="col-6">
+              <table class="table table-hover mt-4">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th class="h4" scope="col">數據類型</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Number</td>
+                    <td>數字</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>String</td>
+                    <td>字串</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Boolean</td>
+                    <td>布林值</td> 
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>undefined</td>
+                    <td class="font-color2">未被賦值的變數</td> 
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>null</td>
+                    <td class="font-color2">不存在的值</td> 
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>symbol</td>
+                    <td></td> 
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>BigInt</td>
+                    <td>任意長度的整數</td> 
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <h4 class="mt-5">數字運算</h4>
+          <hr>
+          <div class="pb-5">
+            <code>
+              x=x+1   <span class="font-color3">等於</span> x++  <span class="font-color3">等於</span>  x+=1
+            </code>
+            <br>
+            <code>
+              x=x-1   <span class="font-color3">等於</span> x--  <span class="font-color3">等於</span>  x-=1
+            </code>
+            <br>
+            <code>
+              x=x÷2   <span class="font-color3">等於</span>  x/=2
+            </code>
+            <br>
+            <code>
+              x=x*2   <span class="font-color3">等於</span>  x*=2
+            </code>
+            <br>
+            <code>
+              x ** y<span class="font-color3">等於</span>  x的y次方
+            </code>
+          </div>
+      
+
+
+
+
+
+
+        <ul class="py-4 nav justify-content-end ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+            </li>
+                       
+        </ul>
+        
+        
+      </div>
+    </div>
+    
+   
+  
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&family=Kalam&family=Noto+Sans+TC&family=Noto+Sans:wght@500&family=Playpen+Sans&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/2b34f8a7fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css02/lesson03-01.css">
+</head>
+<body>
+    <div class="container">
+        <h3>To Do List</h3>
+        <input id="userAdd" type="text">
+  
+        <select id="type">
+          <option value="normal">一般</option>
+          <option value="important">重要</option>
+          <option value="urgent">緊急</option>
+        </select>
+  
+        <button class="add" onclick="add()">新增</button>
+        <button class="export" onclick="print()">匯出</button>
+        <button class="save" onclick="save()" id="saveBtn">存檔</button>
+        <br><br>
+        <div id="root">
+        </div>
+  
+  
+      </div>
+      <script src="../js/lesson03-01.js"></script>
+</body>
+</html>

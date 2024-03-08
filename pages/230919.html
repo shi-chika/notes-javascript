@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Mia's page</title>
+  </head>
+  <body>
+    <div class="page1 bg-gray ">
+      <div class="px-5 container bg-white content">
+        <ul class="py-4 nav justify-content-end ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+            </li>
+           
+            
+          </ul>
+          <p class="text-center py-3 mb-5">網頁全端開發JavaScript_0919</p>
+          
+          <h4>字串基本介紹</h4>
+          <hr>
+          <ul>
+            <li>需要放在單或雙引號裡</li>
+            <li>字串與字串可以用+來連接，但不能使用其他運算符號</li>
+          </ul>
+          <code>
+            let first_name = "wilson";<br>
+            let last_name = "Ren";<br>
+
+            console.log(first_name + " " + last_name); <span class="font-color3">為了讓中間有空格可以加空白引號</span>
+          </code>
+          <p class="pt-4">將數字與字串做+運算，數字會轉成字串，等於2個字串連接</p>
+          <p>例如 : 將 <code>"10"+20</code> 數字會被轉成字串，結果會等於 <code>1020</code></p>
+          <pre class="bg-light-blue ">
+            <code class="font-color1 ">
+              Let n1 = 20;
+              Let n2 = 30;
+              Let text = “hello”;
+              Let n3 = 40;
+              Let n4 = 50; 
+              console.log ( n1 + n2 );  <span class="font-color3">數字相加，結果是</span> 50
+              console.log ( n1 + n2 + text );  <span class="font-color3">會先做數字相加，50再轉成字串，結果是</span> 50hello
+              console.log ( n1 + n2 + text + n3 + n4 );  <span class="font-color3">只要與字串相加，數字都會轉成字串，結果是</span> 50hello4050
+            </code>
+          </pre>
+          <p>/n 可以換行</p>
+          <h4 class="pt-5">Number methods  數字方法  (內建函式)</h4>
+          
+          <hr> 
+          <p class="bg-light-blue py-2"><code class="me-4">.toString()</code>將數字轉成字串  </p>
+          <p class="fw-300">
+            let a1 =  "100"; <br>
+            let a2 = 100; <br>
+            let a3 = a1 + a2.toString(); <br>
+            alert ( a3 );    <br>
+
+            結果是  <span class="font-color1">100100</span> 
+          </p>
+          <br>
+          <p class="bg-light-blue py-2 "><code class="me-4">Number( ) </code>將字串轉成數字</p>
+          <p class="bg-light-blue py-2"><code class="me-4">parseInt()</code>將字串轉成整數   </p>
+          <p class="fw-300">
+            let a1 =  "100"; <br>
+            let a2 = 100; <br>
+            let a3 =  parseInt(a1) + a2; <br>
+            alert ( a3 );    <br>
+
+            結果是  <span class="font-color1">200</span> 
+          </p>
+          <p class="bg-light-blue py-2"><code class="me-4">parseFloat()</code>將字串轉成浮點數(有小數點的數字)   </p>
+          <pre class="bg-light-blue  p-3 ">
+            let num1 = prompt("請輸入數字1");
+            let num2 = prompt("請輸入數字2");
+            console.log(num1+num2);   <span class="font-color1">字串相加</span>
+            
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            console.log(num1+num2);  <span class="font-color1">整數相加</span>
+            
+            let num3 = prompt("請輸入數字3");
+            let num4 = prompt("請輸入數字4");
+            
+            num3 = parseFloat(num3);
+            num4 = parseFloat(num4);
+            console.log(num3+num4);   <span class="font-color1">包含小數點的數字相加</span>
+          </pre>
+          <br>
+
+          <p class="bg-light-blue py-2"><code class="me-4">.toFixed(n)</code>將數字 <span  class="mark-red">四捨五入</span>取到小數點第n位數， <span class="mark-red">原本類型是數字會轉成字串</span> </p>
+          
+          <p>例 : 將圓周率取到小數第2位<br>
+            const pi = 3.1415926535;<br>
+            console.log( pi.toFixed (2) );<br>
+          
+            結果是 <span class="font-color2">3.14</span></p>
+            <br>
+          <p class="bg-light-blue py-2"><code class="me-4">typeof</code>查詢類型，後面放要查詢的內容<br></p>
+          <p>
+              let age = 27;<br>
+              console.log ( typeof age<code>.toString()</code>);<br>
+              結果是 <span class="font-color2">string 字串</span>
+          </p>
+          <br>
+          <p>
+            let age = 27;<br>
+            console.log ( typeof  age );<br>
+            結果是 <span class="font-color2">number 數字</span>
+          </p>
+          <br>
+          <h6 class="pt-4">注意</h6>
+          <p class="pb-4 ">
+            二進制不能精確表示所有小數，可能導致意外結果<br>
+            例如: 0.1 + 0.2 === 0.3   <span class="mark-yellow">結果會是false</span><br>
+            <br>
+           
+          </p>
+          <h4 class="mt-5">String Attributes and Methods 字串方法</h4>
+          <small class="text-secondary">關於字串的屬性與應用</small>
+          <hr>
+
+          <p class="bg-light-blue mt-4 py-2"><code class="me-4">.length </code>長度計算 (回傳字串長度)</p>
+          <p>
+            let str = “simple”;<br>
+            console.log ( str.length );<br>
+            結果為6
+          </p>
+          <p ><span >*空白格也列入計算</span></p>
+          <br>
+          <p class="bg-light-blue py-2"><code class="me-4">[n] </code>取出第 n 個字</p>
+          <p>*若字串中 <span class="mark-green">沒有該索引值</span>的字，會是undefind</p>
+          <p >
+            let str = “simple”;<br>
+            console.log ( str [ 0 ] );<br>
+            結果為s
+          </p>
+          <br>
+         
+          <br>
+          <p class="bg-light-blue py-2"><code class="me-4">.indexOf(“ ”) </code>查詢字串索引值，輸入字串回傳該字的位置(索引值)</p>
+          <p>*若找不到該字會回傳-1</p>
+          <p>
+            let str = “simple”;<br>
+            console.log ( str .indexOf ( “s” ) );<br>
+            結果為0 <br>
+            console.log ( str .indexOf ( “a” ) ); <br>
+            結果為-1
+          </p>
+          <br>
+          <p class="bg-light-blue py-2"><code class="me-4">.trim()</code>去除掉段落的左右空白<br>
+          <pre>
+            trimString("    hi, mom!  ") 
+            trimString(" aa@gmail.com  ")
+          </pre>
+          <pre>
+            function trimString(str){
+              return str.trim();
+            }
+          </pre>
+          <pre>
+            結果:
+            "hi, mom!"
+            "aa@gmail.com"
+          </pre>
+
+          <p class="bg-light-blue py-2"><code class="me-4">.toLowerCase()</code>暫時將字母都轉成小寫<br>
+            <code class="me-4">.toUpperCase()</code>暫時將字母都轉成大寫</p>
+            <p>
+              let str = “Simple”;<br>
+              console.log ( str. toLowerCase ( ) );<br>
+              console.log ( str. toUpperCase ( ) );<br>
+              結果為<br>
+              simple <br>
+              SIMPLE
+            </p>
+            <br>
+            <p>
+              let str = “Simple”;<br>
+              str. toUpperCase ( );<br>
+              console.log ( str );<br>
+              因為不會改變字串本身，結果會是 <code>Simple</code>                 
+            </p>
+            <p>*要改變字串必須用<span class="mark-yellow">賦值的方式</span></p>
+            <p>
+              let str = “Simple”;<br>
+              str = str. toUpperCase ( );<br>
+              console.log ( str );<br>
+              結果會是 <code>SIMPLE</code>  
+            </p>
+            <br>
+            <p class="bg-light-blue py-2"><code class="me-4">.slice (起始值,終點值)</code>截取字串 (依照索引值)</p>
+            <p >
+              let str = “simple”;<br>
+              console.log ( str .slice( 0 , 4 ));<br>
+              結果為simp
+            </p>
+            <p>起始值0 (包含自己)，從0開始取<br>
+              終點值4 (不包含自己)，只取到4的前一個字，也就是3 <br>
+              <br>
+              若只有1個數會視為起始值，取到最後1個字 <br>
+              str .slice( 2 )
+              結果為 mple <br>
+              <br>
+              可以負數取值<br>
+              str .slice( -3 ) <br>
+              結果為 ple
+            </p>
+              
+            <p class="bg-light-blue py-2"><code class="me-4">.substring (起始值,終點值)</code>截取字串 (依照索引值)</p>
+            <p>
+              substring、slice 基本上用法一樣，差別在幾個特殊情況 <br>
+            <span class="mark-brown">當起始位置 > 終點位置時</span><br>
+              slice 會回傳空字串 <br>
+              substring 會將起始位置與終點位置交換 <br>
+              <br>
+              <span class="mark-brown">當終點位置為負數時</span><br>
+              slice 正常輸出字串，可以使用負數索引  <br>
+              substring 會將負數換成0 
+            </p>
+            <p class="bg-light-blue py-2"><code class="me-4">.substr (起始值,取出幾個字串)</code>截取字串 (依照索引值)</p>
+            <p>
+              第2個參數並非終點位置，是取出幾個字串 <br>
+              第2個參數為負數時視為0，也就是取出0個字串 (空字串) <br>
+              第1個參數可以使用負數索引
+            </p>
+            <br>
+            <p class="bg-light-blue py-2"><code class="me-4">.split ()</code>字串轉陣列 (依照條件)</p>
+            <p>切割字串，依照括號內放的內容來切割字串，分割後的字串會裝進陣列</p>
+            <pre>
+              function splitString(str){
+                return str.split(",");
+              }
+            </pre>
+            <pre>
+              splitString("black,red,white")
+              splitString("coffee,tea")
+            </pre>
+            <pre>
+              // ["black","red","white"]
+              // ["coffee","tea"]  
+            </pre>
+            <hr>
+            <p>
+              let sentence = “Today is a good day”;<br>
+              let result = sentence.split (“ is ”);<br>
+              console.log (result);     
+            </p>
+            <p>
+              <span class="font-color1">結果為</span><br>
+              ["To day ", " a good day"]
+            </p>
+            <p>*用來分割的字會消失</p>
+            <hr>
+            <p>*用空格來分割字串</p>
+            <p>
+              let para = “Today  is  a  good  day”;<br>
+              console.log (pra.split(" "));     
+            </p>
+            <p>
+              <span class="font-color1">結果為</span><br>
+              ["Today", "is", "a", "good", "day"]
+            </p>
+           
+            <p>
+              let name = "Selina";<br>
+              console.log(name.split("l"))
+            </p>
+            <p>
+              <span class="font-color1">結果為</span><br>
+              ["Se", "ina"]
+            </p>
+            <hr>
+            <p>
+              console.log(name.split())
+            </p>
+            <p>
+              <span class="font-color1">結果為</span><br>
+              ["Selina"]
+            </p>
+            
+            <hr>
+            <p>
+              console.log(name.split(""))
+            </p>
+            <p>
+              <span class="font-color1">結果為</span><br>
+              ["S", "e", "l", "i", "n", "a"]
+            </p>
+            <p>*放空字串可切割每個單字</p>
+            <p class="bg-light-blue py-2"><code class="me-4">.join ( )</code>陣列 轉字串(依照條件)</p>
+            <p>將陣列元素轉換成字串 <br>
+              括號內->用什麼字元來串接陣列裡的元素</p>
+            <p>
+              str = [ 123, 456, 789 ]; <br>
+              console.log ( str .join ( '' ) );   // "123456789" <br>
+              console.log ( str .join ( '-') );   // "123-456-789"    
+            </p>
+            <br>
+            <p class="bg-light-blue py-2"><code class="me-4">.startsWith(“s”) </code>查開頭是否為s，有大小寫之分<br></p>
+            <p class="bg-light-blue py-2"><code class="me-4">.endsWith(“s”) </code>查結尾是否為s，有大小寫之分<br></p>
+            <p>*會回傳true 或 false</p>
+            <p>
+              let sentence = “Today is a good day”;<br>
+              console.log ( sentence .startsWith (“Today”) );<br>
+              <span class="font-color1">結果是</span> <code>true</code>                
+            </p>
+            
+            <br>
+            <p class="bg-light-blue py-2"><code class="me-4">.includes(str)  </code>查詢字串是否包含str<br></p>
+            <p>*會回傳true 或 false</p>
+            <p>
+              let sentence = “Today is a good day”;<br>
+              console.log ( sentence .includes (“good”) );   <br>
+              結果是 <code>true</code>               
+            </p>
+            <br>
+            <p class="bg-light-blue py-2"><code class="me-4">.charAt( )  </code>用位置(索引值)查詢內容、字元</p>
+            <p>
+              let sentence = “Today is a good day”;<br>
+              console.log ( sentence .charAt ( 2 ) );<br>
+              結果為 <code>d</code>
+                  
+            </p>
+            <p class="bg-light-blue py-2"><code class="me-4"> .charCodeAt( ) </code>用位置(索引值)來取得字元的 Unicode 編碼</p>
+            <br>
+            
+            
+            
+          <!-- 頁尾 -->
+            <ul class="py-4 nav justify-content-end ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+            </li>
+                         
+          </ul>
+
+        <br>
+        
+      </div>
+    </div>
+    
+   
+  
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

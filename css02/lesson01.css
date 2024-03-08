@@ -1,0 +1,132 @@
+body{
+  background: url("https://images.pexels.com/photos/6461325/pexels-photo-6461325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center / cover;
+}
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  p{
+    margin-bottom: 0;
+  }
+  select,option{
+    color: #5a5858;
+    
+  }
+  .order-online {
+    width: 45%;
+    padding: 54px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    border: 2px dashed #fff;
+    /* box-shadow: 0 0 30px #000; */ 
+  }
+  
+  .gridForm {
+    display: grid;
+    gap: 16px;
+  }
+  
+  .grid01 {
+    grid-template-columns: 1fr ;
+  }
+  
+  .grid03 {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  
+  .grid02 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .btn {
+    width: 180px;
+    border-radius: 45px;
+    border: 3px solid transparent;
+    background-color: #8b4513;
+    color: #deb887;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2); 
+  }
+  .btn02{
+    background-color: #8b4513;
+    color: #deb887;;
+  }
+  .btn:hover {
+    background-color:  #deb887;
+    color: #8b4513;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .jcsr {
+    justify-content: space-evenly;
+  }
+  
+  .box01 {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .inputBox {
+    border: 3px solid #d2b48c;
+    border-radius: 5px;
+  }
+  
+  .ms-3 {
+    margin-left: 16px;
+  }
+  
+  .mt-4 {
+    margin-top: 36px;
+  }
+  
+  .mt-3 {
+    margin-top: 16px;
+  }
+  .ps-12{
+    padding-left: 28px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  
+  h3 {
+    font-size: 26px;
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .listGroup p {
+    color: #ffffff;
+    background-color:rgba(181,164,136,0.9);
+    /* background-color:rgba(169,169,169,0.9); */
+    /* background-color:rgba(169,152,123,0.9); */
+    padding-left: 58px;
+    padding-top: 12px;
+  }
+  .listGroup :last-child{
+    padding-bottom: 12px;
+  }
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-weight: 500;
+    border-bottom: 1px solid #ffffff;
+    align-self: stretch;
+    text-align: center;
+    padding-bottom: 16px;
+  }
+  
+  .text-wh {
+    color: #ffffff;
+  }
+  

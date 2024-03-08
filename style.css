@@ -1,0 +1,147 @@
+*
+
+  body {
+    font-family: 'Noto Sans','Noto Sans TC',sans-serif;  
+    font-weight: 400;
+  }
+
+/* font-family: 'Skranji', cursive; */
+  
+  img {
+    display: block;
+    max-width: 100%; 
+  }
+  .container{
+    max-width: 984px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;  
+}
+  code{
+  font-size: 16px;
+  font-family: 'Nunito Sans', 'Noto Sans TC',sans-serif;
+  font-weight: 400;
+  }
+
+  /* i{
+    vertical-align: middle;
+  } */
+ 
+ .page-vh100{
+  height: 100vh;
+ }
+ .page1 h1{
+    font-family:'Skranji', 'Noto Sans TC',cursive,sans-serif;
+    line-height: 1.5;
+    
+ }
+ .date-item a{
+    text-decoration: none;
+    display:block;
+    color:#343331;
+    padding: 20px;
+    border:3px solid transparent;
+    /* background-color: #c8baa7; */
+    background-color:#efe5ca;
+    
+    border-radius: 12px;
+    font-weight: 700; 
+  }
+ .nav-link{
+    /* color:#84909b ; */
+    /* color: #c49a69; */
+    color: #d2b74e;
+    font-weight: 500;
+  }
+  .date-item a:hover{
+    border:3px dashed #c49a69;
+    background-color: transparent;
+  }
+  .date-item li{
+    margin:18px;
+  }
+  .content{
+    height: 100%;
+  } 
+  .hp-img img:hover{
+    animation: shake .1s linear infinite alternate ;
+  }
+
+  .rotate5:hover{
+    transform:rotate(10deg);
+  }
+  .rotate-5:hover{
+    transform:rotate(-10deg);
+  }
+  @keyframes shake {
+    0%{ transform: rotate(-2deg);}
+    100%{ transform: rotate(2deg);}
+    
+  }
+
+/* page */
+
+.bg-blue{
+    background-color: #f0f0f0;
+}
+.bg-white{
+    background-color: #fff;
+}
+.bg-gray{
+  background-color: #f6f1ec;
+  
+}
+.bg-light-blue{
+  background-color: #f0f0f3;
+}
+.bg-light-gray{
+  background-color: #fafafa;
+}
+.font-color1{
+  color:  #d63384;
+}
+.font-color2{
+  color: brown;
+}
+.font-color3{
+  color: #171717;
+}
+.font-color-green{
+  color: #7b8d41;
+}
+.font-color-yellow{
+  color: #c39043;
+}
+.mark-yellow{
+  background: linear-gradient(transparent 70%, #ecc656 0);
+}
+.mark-red{
+  background: linear-gradient(transparent 70%,#e59f5c 0);
+}
+.mark-green{
+  background: linear-gradient(transparent 70%,#c4c46a 0);
+}
+
+
+.fw-200{
+  font-weight: 200;
+}
+.fw-300{
+  font-weight: 300;
+}
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-700{
+  font-weight: 700;
+   
+}
+
+
+
+
+
+  

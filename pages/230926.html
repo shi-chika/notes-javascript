@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bs CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Mia's page</title>
+  </head>
+<body>
+    <div class="page1 bg-gray">
+        <div class="px-5 container bg-white content">
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+               
+                
+            </ul>
+            
+            <p class="text-center py-3 mb-5">網頁全端開發JavaScript_0926</p>
+            
+            <div class="fw-300">
+              <h4>物件 Object</h4>  
+              <hr>
+              <p class="h6">新增物件</p>
+              <pre class="bg-light pt-3">
+                let <span class="font-color1 ms-2"> 物件名稱</span> = { 
+                  
+                  屬性  (key:值)
+                  
+                  行為 (methods)
+
+                };
+              </pre>
+              <ul>
+                <li>每個 JavaScript 物件都具有屬性 (properties) 與方法 (methods) 可以操作</li>
+                <li>物件內的Function 稱為方法(methods)，意為功能、功用</li>
+                <li>物件的內容是由屬性組成的，而屬性是由 key-value pair 構成</li>
+                <li>屬性名稱只能是字串，若不是字串則會被強制轉為字串</li>
+                <li>value 可為任意資料型別的值，並且值是以參考（reference）的方式儲存</li>
+                
+              </ul>
+              <br>
+              <br>
+              <p>存取物件的屬性有兩種方式</p>
+              <pre class="bg-light pt-3 ">
+                let Wilson = {
+                  first_name : "Wilson",
+                  last_name : "Ren",
+                  age : 26,
+                  is_married : true,
+                  !!12345!! : "Hello Hello",
+                  "002" : "yaya",
+                };
+                            
+              </pre>
+              <p>1.特性存取（property access）<span class="font-color1">.</span></p>
+              <pre class="bg-light pt-3">
+                console.log (Wilson .first_name);
+                console.log (Wilson .name);
+                <span class="font-color1">// Wilson</span>
+                <span class="font-color1">// undefined</span>        
+              </pre>
+              <p>2.鍵值存取（key access）<span class="font-color1">[ ]</span></p>
+
+              <pre class="bg-light pt-3">
+                console.log (Wilson ["age"] ); 
+                console.log (Wilson ["!!12345!!"]  ); 
+                console.log (Wilson ["002"] ); 
+                 
+                <span class="font-color1">// 26</span>
+                <span class="font-color1">// "Hello Hello"</span>
+                <span class="font-color1">// "yaya"</span>
+              </pre>
+              <p>*若要使用一些包含特殊字符或動態產生的字串作為屬性名稱，就必須使用鍵值存取 [ ] 的方式</p>
+              <p>*若存取物件中不存在的屬性，此時會回傳 undefined</p>
+              <br>
+              <br>
+              <p class="h4">物件方法 (Object Method)</p>
+              <hr>
+              <ul>
+                <li>可以實際運用在用戶、訂單、商品等</li>
+                <li>物件通常會有自己的「動作、功能」，可能是由一連串的資料操作、網路請求等構成的有意義的行為</li>
+                <li>例如用戶的登入登出、訂單結帳取消、商品加入購物車等</li>
+                <li>這些「動作」在 JavaScript 中，可以用物件方法來實作</li>
+              </ul>
+              <br>
+              <p class="h5 font-color2"> this 用法</p>
+              <hr>
+              <pre class="bg-light pt-3 mb-0">
+                let Wilson = {
+                  first_name : "Wilson",
+                  last_name : "Ren",
+                  age : 26,
+                  is_married : true,
+                  '!!12345!!': "Hello Hello",
+
+                  sayHi () {
+                    console.log( <span class="font-color1">this</span>.first_name + "say hi" )
+                  },
+                  walk () {
+                    console.log( <span class="font-color1">this</span>.first_name + "is walking..." )
+                  }
+                };
+                            
+              </pre>
+              <p>*要存取物件本身的資料或屬性時，可以用關鍵字 this</p>
+              <br>
+              <p class="h6">電腦科學中，時間複雜度是指</p>
+              <p>在參數逐漸變大的情況下，function執行完畢所需的時間的成長速度</p>
+             
+              
+              
+              
+              
+
+
+              
+              
+            <!-- 頁尾 -->
+            <br>
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/app0921.js"></script>
+</body>
+</html>

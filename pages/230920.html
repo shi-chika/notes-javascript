@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bs CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Mia's page</title>
+  </head>
+<body>
+    <div class="page1 bg-gray">
+        <div class="px-5 container bg-white content">
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+               
+                
+            </ul>
+            
+              <p class="text-center py-3 mb-5">網頁全端開發JavaScript_0920</p>
+              <h4>邏輯判斷</h4>
+              <hr>
+              <div class="fw-300">
+                <p class="bg-light py-2 "><code class="me-4">AND(&&)</code>運算子只有在兩邊的運算結果為true時，整個運算式的結果才為true</p>
+                <p >例--<code class="me-4">A and B</code>AB都必須是true， <span class="mark-red"> 只要AB有1個是false</span>，結果是false</p>
+                <br>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-hover ">
+                            <thead class="fw-300">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">運算式1 && 運算式2</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>true && true</td>
+                                <td class="font-color2 fw-400">true</td>
+                                <td>先判斷運算式1 為 true，接著判斷運算式2 也為 true，結果為 true</td>
+                                
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>true && false</td>
+                                <td>false</td>
+                                <td>先判斷運算式1 為 true，接著判斷運算式2 為 false，結果為 false</td>
+                                
+                              </tr>
+                              
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>false && true</td>
+                                <td>false</td>
+                                <td>先判斷運算式1 為 false，不判斷運算式2，結果為 false</td>  
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>false && false</td>
+                                <td>false</td>
+                                <td>先判斷運算式1 為 false，不判斷運算式2，結果為 false</td> 
+                              </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <p>使用於 布林值時會回傳布林型態的值，用於非布林型態值時，回傳兩指定運算元之一</p>
+                <ul>
+                  <li class="font-color1 me-4 ">AND &&</li>
+                  <li>假如 左邊運算式 可以被轉換成 false 的話，回傳 左邊的值</li>
+                  <li>假如 左邊運算式 可以被轉換成 True 的話，回傳 右邊的值</li>
+                </ul>
+                <br>
+                <small>下圖截自 MDN</small>
+                <div><img src="../images/js01.png" alt="" width="350px" height="210px"></div>
+                <br>
+                <br>
+                <p class="bg-light py-2 "><code  class="me-4" >OR( || )</code>任一個運算元為true就回傳true，若全部的運算元為false則回傳false。</p>
+                <p >例--<code class="me-4">A or B</code>只要AB有1個是true，結果都會是true</p>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-hover">
+                            <thead class="fw-300">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">運算式1 || 運算式2</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>true  || true</td>
+                                <td >true</td>
+                                <td >先判斷運算式1 為 true，不判斷運算式2，結果為 true</td>
+                                
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>true  || false</td>
+                                <td>true</td>
+                                <td>先判斷運算式1 為 true，不判斷運算式2，結果為 true</td>
+                                
+                              </tr>
+                              
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>false  || true</td>
+                                <td>true</td>
+                                <td>先判斷運算式1 為 false，接著判斷運算式2 為 true，結果為 true</td> 
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>false  || false</td>
+                                <td class="font-color2 fw-400">false</td>
+                                <td>先判斷運算式1 為 false，接著判斷運算式2 為 false，結果為 false</td>
+                              </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <ul>
+                  <li class="font-color1 me-4 ">OR  || </li>
+                  <li>假如 左邊運算式 可以被轉換成 True 的話，回傳 左邊的值</li>
+                  <li>假如 左邊運算式 可以被轉換成 false 的話，回傳 右邊的值</li>
+                </ul>
+                <small>下圖截自 MDN</small>
+                <div><img src="../images/js02.png" alt="" width="350px" height="210px"></div>
+                <br>
+                <br>
+                <p class="bg-light py-2 "><code class="me-4">NOT ( ! )</code>使結果相反，將原本為 true 的轉換為 false，原本為 false 的轉換為 true</p>
+                <div class="row">
+                  <div class="col-6">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col"></th>
+                          <th scope="col">結果</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody class="fw-400">
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>! true</td>
+                          <td>false</td>
+                          
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>! false</td>
+                          <td>true</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>! 0</td>
+                          <td>true</td>
+                        </tr>  
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>! 1 （或其他非零的數值）</td>
+                          <td>false</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          <td>! "字串"</td>
+                          <td>false</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <br>
+                <br>
+                <h6>練習題</h6>
+                <p>讓使用者輸入年齡，系統依照年齡顯示相對應票價</p>
+                <ul>
+                  <li>12歲以下為兒童票，100元</li>
+                  <li>12~65歲為成人票，250元</li>
+                  <li>65歲以上為敬老票，150元</li>
+                </ul>
+                  <pre class="bg-light-gray fs-6 text-dark my-0 ">
+                      <code >
+                          <span class="font-color1">let</span> age = prompt(" 請輸入年齡 : ");
+                          age = Number(age);
+                          
+                          <span class="font-color1">if</span> (age >=0 && age <= 12 ){
+                              alert("兒童票一張100元");
+                          } <span class="font-color1">else if</span> (age > 12 && age <= 65 ){
+                              alert("成人票一張250元");
+                          } <span class="font-color1">else if</span> (age > 65 && age <=125){
+                              alert("敬老票一張150元")
+                          } <span class="font-color1">else</span> {
+                            alert("請輸入正確年齡")  
+                          }     
+                      </code>
+                  </pre>
+                
+                <ul class="py-4 nav justify-content-end ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                  </li>
+                             
+                </ul>
+                  <br>
+              </div>
+              
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</body>
+</html>

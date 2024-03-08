@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Playfair+Display:wght@400;500&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css02/lesson01.css">
+    <title>Mia's page</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="order-online">
+        <div class="form">
+          <h2 class="title">ONLINE ORDERING</h2>
+          <div class="gridForm grid01 ">
+            <input id="input_name" class="inputBox box01 " type="text" placeholder="請輸入姓名" value="" required>
+          </div>
+          <div class="gridForm grid02 mt-4 ">
+            <select id="kind"  class="inputBox box01" >
+              <option value="none" disabled selected hidden>請選擇款式</option>
+              <option value="style01">秋冬款</option>
+              <option value="style02">春夏款</option>
+            </select>
+            <select id="item"  class="inputBox box01 ">
+              <option value="none" disabled selected hidden>請選擇商品</option>
+              <option value="clothes">上衣</option>
+              <option value="coat">外套</option>
+              <option value="pants">長褲</option>
+            </select>
+            <input id="input_Qty" type="number" class="box01 inputBox " min="1" placeholder="請輸入數量">
+          </div>
+         
+    
+         <br>
+          <div class="d-flex jcsr mt-4">
+            <button onclick="order()" class="btn box01 btn02">訂購</button>
+            <button onclick="about()" class="btn box01 ">關於我們</button>
+          </div>
+          <br>
+    
+          <h3 class="title">ORDER LIST</h3>
+          <div class="listGroup">
+            <p class="order-list">姓名 : <span class="ps-12" id="order_name"></span></p>
+            <p class="order-list">款式 : <span class="ps-12" id="order_kind"></span></p>
+            <p class="order-list">商品 : <span class="ps-12" id="order_item"></span></p>
+            <p class="order-list">數量 : <span class="ps-12" id="order_Qty"></span></p>
+            <p class="order-list">估價 : <span class="ps-12" id="order_price"></span></p>
+          </div>
+          
+    
+        </div>
+      </div>
+    </div>
+   
+    
+   
+  
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="../js/lesson01.js"></script>
+  </body>
+</html>

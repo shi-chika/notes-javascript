@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bs CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans:wght@200;300;400;500;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Mia's page</title>
+  </head>
+<body>
+    <div class="page1 bg-gray">
+        <div class="px-5 container bg-white content">
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+                
+                
+            </ul>
+            
+            <p class="text-center py-3 mb-5">網頁全端開發JavaScript_0925</p>
+            
+            <div class="fw-300">
+              <h4>陣列 array</h4>  
+              <hr>
+              <ul>
+                <li>陣列array裡的值稱為元素element</li>
+                <li>陣列中的元素可以增加或減少，JavaScript中陣列<span class="mark-green">可以包含不同資料類型</span></li>
+                <li>查詢元素時跟字串相同，用非負整數0123來查詢</li>
+                
+              </ul>
+              <p class="bg-light fw-400 p-3">
+                let array  = ["grace",  "mike" ,false ,3.14, null, undefined ]; <br>
+                console.log( array [ 3] ); <br>
+                結果為 <span class="font-color1">3.14</span>
+              </p>
+              <br>
+              <p>換掉第~個值</p>
+              <p class="bg-light fw-400 p-3">
+                let array  = ["grace",  "mike" ,false ,3.14, null, undefined ]; <br>
+                array [ 0 ] = "wilson"; <br>
+                console.log( array [ 0] ); <br>
+                結果為 <span class="font-color1"> "wilson"</span>
+              </p>
+              <br>
+              <br>
+              <p class="h5 font-color2"> 資料型別 JavaScript data type</p>
+              <hr>
+             
+              <div class="row">
+                <div class="col-6">
+                  <p class="h6 mb-0"> 原始型別 Primitive type</p>  
+                  <table class="table table-hover mt-4 caption-top table-bordered table-light">
+                    <caption>JS 的資料型別分成兩大類：「原始型別、物件型別」</caption>
+                    
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Number</td>
+                        <td>數字</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>String</td>
+                        <td>字串</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Boolean</td>
+                        <td>布林值</td> 
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>undefined</td>
+                        <td class="font-color2">未被賦值的變數</td> 
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>null</td>
+                        <td class="font-color2">不存在的值、空值</td> 
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>symbol</td>
+                        <td>符號</td> 
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>BigInt</td>
+                        <td>任意長度的整數</td> 
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6">
+                    <p class="h6 mb-0">物件型別 Object type </p>  
+                    <table class="table table-hover mt-4 caption-top table-bordered table-light">
+                      <caption>原始型別以外，其他的值都是物件型別</caption>
+                      
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Function</td>
+                          <td>函式</td>
+                          
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Array</td>
+                          <td>陣列</td>
+                          
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Object</td>
+                          <td>物件</td> 
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>Date</td>
+                          <td class="font-color2"></td> 
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          <td>Map</td>
+                          <td class="font-color2"></td> 
+                        </tr>
+                        <tr>
+                          <th scope="row">6</th>
+                          <td>Set</td>
+                          <td></td> 
+                        </tr>
+                        
+                        
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+              <br>
+              <p>原始型別</p>
+              <ul>
+                <li>原始型別的值是 pass by value</li>
+                <li>儲存以及複製的都是「值本身」，互不影響</li>
+                <li>JS 中，原始值是無法改變的<br>我們可以給變數重新賦予一個「新值」，但不能去修改「原本的值」</li>
+                
+                
+              </ul>
+              <p class="bg-light fw-400 p-3 font02">
+                let a = "hello" <br>
+                a.toUpperCase () <br>
+                console.log (a)   <span class="text-secondary ms-4">  // 依然是 hello</span> <br>
+                a = a.toUpperCase () <br>
+                console.log (a)  <span class="text-secondary ms-4">  // 得到 HELLO</span> <br>
+              </p>
+                
+              <br>
+              <p class="bg-light fw-400 p-3 font02">
+                let people1 = "wilson" ; <br>
+                let people2 = people1; <br>
+                <br>
+                people1 = "Joy";   <span class="text-secondary ms-4">  // 更改 people1 的值</span> <br>
+                
+                console.log(people2); <span class="text-secondary ms-4">  //  people2 是一個獨立的新值，</span> <span class="font-color1">結果是"wilson"</span><br>
+              </p>
+              <br>
+              <br>
+              <p>物件型別</p>
+              <ul>
+                <li>物件型別的值是 pass by reference 引用數據類型</li>
+                <li>賦值時是指向同個地址的概念</li>
+                <li>更改值時，會連帶影響到其他指向同地址的變數</li>
+              </ul>
+              <p class="bg-light fw-400 p-3 font02">
+                let fruit1 = ["apple", "grape", "lemon"] <br>
+                let fruit2 = fruit1  <br>
+                fruit2[0] = "banana"  <span class="text-secondary ms-4">  // 更改 fruit2 的值</span>
+                <br>
+                console.log (fruit1)  <br>
+                console.log (fruit2)    <br>
+                結果為<br>
+                <span class="font-color1">"banana", "grape", "lemon"</span> <br>
+                <span class="font-color1">"banana", "grape", "lemon"</span>  
+              </p>
+              
+              <p>*更改fruit2 的值，fruit1的值也會被更改</p>
+              <br>
+              <br>
+
+              <p class="h4">比較 Reference Data Type</p>
+              <hr>
+              <p class="bg-light fw-400 p-3 font02">
+                let arr1 = [ 1 ,2 ,3 ]; <br>
+                let arr2 = [ 1 ,2 ,3 ] ; <br>
+                
+                console.log (arr1 === arr2)  <br>
+                
+                結果為<span class="font-color1 ms-4">false</span> <br>
+                
+              </p>
+              
+              <p class="bg-light fw-400 p-3 font02">
+                let arr1 = [ 1 ,2 ,3 ]; <br>
+                let arr2 = arr1 ; <br>
+                
+                console.log (arr1 === arr2)  <br>
+                
+                結果為<span class="font-color1 ms-4">true</span> <br>
+                
+              </p>
+              <br>
+              <p class="bg-light py-2"><code class="me-4">.length</code>查詢陣列長度  </p>
+              <p class="p-3 font02">
+                let arr1 = [ 1 ,2 ,3 ]; <br>
+               
+                console.log (arr1.length);  <br>
+                
+                結果為<span class="font-color1 ms-4">3</span> <br>
+              </p>
+              <p class="bg-light py-2"><code class="me-4">.push (element)</code>從陣列尾端「新增」1個或多個元素，並return陣列新長度</p>
+              <p class="bg-light py-2"><code class="me-4">.pop( )</code>刪除陣列最後1個值，並回傳該值 </p>
+              <p class="bg-light py-2"><code class="me-4">.shift( )</code>刪除陣列第1個值，並回傳該值 </p>
+              <p class="bg-light py-2"><code class="me-4">.unshift (element)</code>從陣列開頭「新增」1個或多個元素，並return陣列新長度 </p>
+
+
+
+
+
+              
+              
+            <!-- 頁尾 -->
+            <br>
+            <ul class="py-4 nav justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/app0921.js"></script>
+</body>
+</html>
